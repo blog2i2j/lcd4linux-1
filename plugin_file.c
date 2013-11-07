@@ -86,6 +86,31 @@ static void my_readline(RESULT * result, RESULT * arg1, RESULT * arg2)
     SetResult(&result, R_STRING, &value);
 }
 
+/* function 'write' */
+/* takes two arguments, file name and content */
+
+static void my_write(RESULT * result, RESULT * arg1, RESULT * arg2)
+{
+    char value[80];
+    value[0] = '\0';
+
+    FILE *fp;
+    fp = fopen(R2S(arg1), "w");
+
+    if (fp)
+    {
+	fprintf(fp, R2S(arg2));
+	fclose(fp);
+    }
+    else 
+    {
+	info("can't open file to write");
+    }
+
+    /* store result */
+    SetResult(&result, R_STRING, &value);
+}
+
 /* plugin initialization */
 /* MUST NOT be declared 'static'! */
 int plugin_init_file(void)
@@ -95,6 +120,7 @@ int plugin_init_file(void)
     /* the second parameter is the number of arguments */
     /* -1 stands for variable argument list */
     AddFunction("file::readline", 2, my_readline);
+    AddFunction("file::write", 2, my_write);
 
     return 0;
 }
