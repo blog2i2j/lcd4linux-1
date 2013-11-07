@@ -3,6 +3,12 @@ svn:wc:ra_dav:version-url
 V 50
 /svn/lcd4linux/!svn/ver/1095/trunk/contrib/picoLCD
 END
+lcd4linux.conf
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/lcd4linux/!svn/ver/1095/trunk/contrib/picoLCD/lcd4linux.conf
+END
 rsstimer.py
 K 25
 svn:wc:ra_dav:version-url
@@ -32,10 +38,4 @@ K 25
 svn:wc:ra_dav:version-url
 V 76
 /svn/lcd4linux/!svn/ver/1095/trunk/contrib/picoLCD/lcd4linux.conf.rss.timers
-END
-lcd4linux.conf
-K 25
-svn:wc:ra_dav:version-url
-V 65
-/svn/lcd4linux/!svn/ver/1095/trunk/contrib/picoLCD/lcd4linux.conf
 END
